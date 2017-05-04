@@ -19,8 +19,9 @@ public class PricingRules implements IPricingRules {
         double total = 0;
         for (Object o : items.entrySet()) {
             Map.Entry<Product, Integer> pair = (Map.Entry) o;
-            if (pair.getKey().getCode().equalsIgnoreCase(ProductCode._ULT_SMALL.toString()) && pair.getValue() == 3) {
-                total += pair.getKey().getPrice() * 2;
+            if (pair.getKey().getCode().equalsIgnoreCase(ProductCode._ULT_SMALL.toString()) && pair.getValue() >= 3) {
+                total += ((pair.getValue() / 3) * 2) * pair.getKey().getPrice();
+                total += (pair.getValue() % 3) * pair.getKey().getPrice();
             } else if (pair.getKey().getCode().equalsIgnoreCase(ProductCode._ULT_LARGE.toString()) && pair.getValue() > 3) {
                 total += 39.90 * pair.getValue();
             } else if (pair.getKey().getCode().equalsIgnoreCase(ProductCode._ULT_MEDIUM.toString())) {
