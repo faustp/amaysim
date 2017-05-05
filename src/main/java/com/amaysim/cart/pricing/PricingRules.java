@@ -16,7 +16,7 @@ public class PricingRules implements IPricingRules {
     private int noOfBundledItems = 0;
 
     public Double apply(Map<Product, Integer> items, String promoCode) {
-        
+
         double total = 0;
         for (Object o : items.entrySet()) {
             Map.Entry<Product, Integer> pair = (Map.Entry) o;
