@@ -5,14 +5,12 @@ import com.amaysim.cart.pricing.PricingRules;
 import com.amaysim.cart.product.Product;
 import com.amaysim.cart.product.ProductCode;
 import com.amaysim.cart.utils.ProductFactory;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Map;
-import java.util.Set;
 
-import static junit.framework.Assert.*;
+import static junit.framework.Assert.assertEquals;
 
 /**
  * Created by FaustineP on 04/05/2017.
