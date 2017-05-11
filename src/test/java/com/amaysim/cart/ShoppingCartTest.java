@@ -1,7 +1,5 @@
 package com.amaysim.cart;
 
-import com.amaysim.cart.pricing.PricingRules;
-import org.junit.Before;
 import org.junit.Test;
 
 /**
@@ -9,12 +7,6 @@ import org.junit.Test;
  */
 public class ShoppingCartTest extends Application{
 
-    static PricingRules pricingRules;
-
-    @Before
-    public void setup() {
-        pricingRules = new PricingRules();
-    }
 
     @Test
     public void SCENARIO1() {
