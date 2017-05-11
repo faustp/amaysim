@@ -13,7 +13,7 @@ import static junit.framework.Assert.assertEquals;
  * Created by FaustineP on 11/05/2017.
  */
 public class Application{
-    
+
     public static void main(String args[]) {
         scenario1();
         scenario2();
@@ -22,7 +22,7 @@ public class Application{
     }
 
 
-    private static void scenario1() {
+    protected static void scenario1() {
         PricingRules pricingRules = new PricingRules();
         Cart cart = new ShoppingCart(pricingRules);
         cart.add(ProductFactory.getProduct(ProductCode._ULT_SMALL));
@@ -43,7 +43,7 @@ public class Application{
         System.out.println("   1\t | " + displayItems(cart) + "\t\t|\t" + cart.total() + "\t|  " + displayItems(cart));
     }
 
-    private static void scenario2() {
+    protected static void scenario2() {
         PricingRules pricingRules = new PricingRules();
         Cart cart = new ShoppingCart(pricingRules);
         cart.add(ProductFactory.getProduct(ProductCode._ULT_SMALL));
@@ -67,7 +67,7 @@ public class Application{
         System.out.println("   2\t | " + displayItems(cart) + "\t\t|\t" + cart.total() + "\t|  " + displayItems(cart));
     }
 
-    private static void scenario3() {
+    protected static void scenario3() {
         PricingRules pricingRules = new PricingRules();
         Cart cart = new ShoppingCart(pricingRules);
         cart.add(ProductFactory.getProduct(ProductCode._ULT_SMALL));
@@ -93,7 +93,7 @@ public class Application{
 
     }
 
-    private static void scenario4() {
+    protected static void scenario4() {
         PricingRules pricingRules = new PricingRules();
         Cart cart = new ShoppingCart(pricingRules);
         cart.add(ProductFactory.getProduct(ProductCode._ULT_SMALL));
