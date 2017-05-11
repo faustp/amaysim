@@ -37,4 +37,12 @@ public class ShoppingCart implements Cart {
     public Double total() {
         return pricingRules.apply(items, this.promoCode);
     }
+
+    public String getPromoCode() {
+        return promoCode;
+    }
+
+    public IPricingRules getPricingRules() {
+        return pricingRules;
+    }
 }

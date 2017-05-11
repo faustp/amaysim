@@ -15,7 +15,7 @@ import static junit.framework.Assert.assertEquals;
 /**
  * Created by FaustineP on 04/05/2017.
  */
-public class ShoppingCartTest {
+public class ShoppingCartTest extends Application{
 
     static PricingRules pricingRules;
 
@@ -42,7 +42,7 @@ public class ShoppingCartTest {
         int expectedTotalULTLarge = 1;
         int actualTotalULTLarge = getNoOfItems(ProductCode._ULT_LARGE, cart.items());
         assertEquals(expectedTotalULTLarge, actualTotalULTLarge);
-        System.out.println("Scenario1\t::" + displayItems(cart) + "|\t" + cart.total() + "\t|" + displayItems(cart));
+        System.out.println("   1\t | " + displayItems(cart) + "\t\t|\t" + cart.total() + "\t|  " + displayItems(cart));
     }
 
 
@@ -67,7 +67,7 @@ public class ShoppingCartTest {
         int actualTotalULTLarge = getNoOfItems(ProductCode._ULT_LARGE,cart.items());
         assertEquals(expectedTotalULTLarge,actualTotalULTLarge);
 
-        System.out.println("Scenario2\t::" + displayItems(cart) + "|\t" + cart.total() + "\t|" + displayItems(cart));
+        System.out.println("   2\t | " + displayItems(cart) + "\t\t|\t" + cart.total() + "\t|  " + displayItems(cart));
     }
 
     @Test
@@ -92,7 +92,7 @@ public class ShoppingCartTest {
         int actualTotal1GB = getNoOfItems(ProductCode._1GB,cart.items());
         assertEquals(expectedTotal1GB,actualTotal1GB);
 
-        System.out.println("Scenario3\t::" + displayItems(cart) + "|\t" + cart.total() + "\t|" + displayItems(cart));
+        System.out.println("   3\t | " + displayItems(cart) + "\t\t|\t" + cart.total() + "\t|  " + displayItems(cart));
     }
 
     @Test
@@ -111,26 +111,8 @@ public class ShoppingCartTest {
         int expexctedTotal1GB = 1;
         int actualTotal1GB = getNoOfItems(ProductCode._1GB,cart.items());
         assertEquals(expexctedTotal1GB,actualTotal1GB);
-        System.out.println("Scenario4\t::" + displayItems(cart) + "|\t" + cart.total() + "\t|" + displayItems(cart));
+        System.out.println("   4\t | " + displayItems(cart) + "\t\t|\t" + cart.total() + "\t|  " + displayItems(cart));
     }
 
-    private StringBuilder displayItems(Cart cart) {
-        StringBuilder stringBuilder = new StringBuilder();
-        for (Map.Entry<Product, Integer> item : cart.items().entrySet()) {
-            stringBuilder.append(item.getValue() + "X " + item.getKey().getName() + " ");
 
-        }
-        return stringBuilder;
-    }
-
-    private int getNoOfItems(ProductCode productCode, Map<Product, Integer> products) {
-        int noOfItems = 0;
-        for (Map.Entry<Product, Integer> entry : products.entrySet()) {
-            if (entry.getKey().getCode().equalsIgnoreCase(productCode.toString())) {
-                noOfItems = entry.getValue();
-                break;
-            }
-        }
-        return noOfItems;
-    }
 }

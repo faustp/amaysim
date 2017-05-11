@@ -15,4 +15,6 @@ public interface Cart {
     void add(Product product, String promo);
 
     Double total();
+
+    String getPromoCode();
 }
