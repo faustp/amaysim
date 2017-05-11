@@ -21,6 +21,6 @@
          2	      |      4X Unlimited 5GB 2X Unlimited 1GB              |	209.4	|4X Unlimited 5GB 2X Unlimited 1GB 
 
 # Update
- Added Application.class (entry point) for the purpose to see the result.
+ Added Application.class (entry point) for the purpose to see the test result.
   
    
